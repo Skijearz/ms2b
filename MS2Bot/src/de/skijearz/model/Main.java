@@ -20,7 +20,7 @@ public class Main extends Application {
 	public void botWindow() {
 		try {
 			
-			FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/botMenu.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/de/skijearz/view/botMenu.fxml"));
 			Pane p = loader.load();
 			botMenuController bmc = loader.getController();
 			System.out.println(loader.getController().toString());

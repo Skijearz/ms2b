@@ -6,8 +6,8 @@ import org.sikuli.script.*;
 
 public class bot implements Runnable {
 
-	private static final Pattern actionPopUp = new Pattern (bot.class.getResource("../view/resources/Action_popup_button.png"));
-	private static final Pattern succesrate_imp = new Pattern (bot.class.getResource("../view/resources/succes_rate_imp.png"));;
+	private static final Pattern actionPopUp = new Pattern (Main.class.getResource("/de/skijearz/view/resources/Action_popup_button.png"));
+	private static final Pattern succesrate_imp = new Pattern (Main.class.getResource("/de/skijearz/view/resources/succes_rate_imp.png"));;
 	private static Screen s = new Screen(0);
 	private static Region r = new Region(455, 170, 1050, 680);
 	Random rand = new Random();
