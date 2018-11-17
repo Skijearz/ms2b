@@ -28,7 +28,7 @@ public class GlobalKeyListener implements NativeKeyListener {
 
 		}
 		if(e.getKeyCode() == NativeKeyEvent.VC_F7) {
-			if(App.focusedWindow().getW() < 1919) {
+			if(App.focusedWindow().getW() < 1920) {
 				App.focus("MapleStory2 - A new Beginning");
 			}else {
 				App.focus("MS2BOT");
