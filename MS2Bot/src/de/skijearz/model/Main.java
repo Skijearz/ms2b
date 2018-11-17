@@ -1,5 +1,7 @@
+package de.skijearz.model;
 import java.io.IOException;
 
+import de.skijearz.view.botMenuController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -17,11 +19,14 @@ public class Main extends Application {
 
 	public void botWindow() {
 		try {
-			FXMLLoader loader = new FXMLLoader(Main.class.getResource("botMenu.fxml"));
+			
+			FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/botMenu.fxml"));
 			Pane p = loader.load();
 			botMenuController bmc = loader.getController();
+			System.out.println(loader.getController().toString());
 			bmc.setMain(this);
 			GlobalKeyListener.getControllerInstance(bmc);
+			
 
 			Scene s = new Scene(p);
 			primaryStage.setScene(s);

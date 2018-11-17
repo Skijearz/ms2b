@@ -1,6 +1,9 @@
+package de.skijearz.model;
 import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.keyboard.NativeKeyListener;
 import org.sikuli.script.App;
+
+import de.skijearz.view.botMenuController;
 
 public class GlobalKeyListener implements NativeKeyListener { 
 	private static bot b = null;

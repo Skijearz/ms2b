@@ -1,9 +1,13 @@
+package de.skijearz.view;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
 
+import de.skijearz.model.GlobalKeyListener;
+import de.skijearz.model.Main;
+import de.skijearz.model.bot;
 import javafx.fxml.FXML;
 
 public class botMenuController extends Thread {
