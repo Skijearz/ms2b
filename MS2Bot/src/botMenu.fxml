@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="botMenuController">
+   <children>
+      <Pane layoutY="88.0" prefHeight="40.0" prefWidth="300.0" />
+      <Button layoutX="25.0" layoutY="34.0" mnemonicParsing="false" onAction="#startBot" prefHeight="60.0" prefWidth="120.0" text="Start" />
+      <Button layoutX="155.0" layoutY="34.0" mnemonicParsing="false" onAction="#stopBot" prefHeight="60.0" prefWidth="120.0" text="Stop" />
+   </children>
+</AnchorPane>
