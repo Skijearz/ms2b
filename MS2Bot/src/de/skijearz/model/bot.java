@@ -29,17 +29,27 @@ public class bot implements Runnable {
 			r.setAutoWaitTimeout(0.3);
 
 			
-			Settings.ObserveScanRate = 10f;
-			Settings.WaitScanRate = 10f;
-			App.focus("MapleStory2 - A new Beginning");
+			Settings.ObserveScanRate = 5f;
+			Settings.WaitScanRate = 5f;
+			//App.focus("MapleStory2 - A new Beginning");
 			initiated = true;
 		}
 
 		while (botRunning) {
 
 			if (r.exists(actionPopUp) != null && !(r.exists(succesrate_imp) != null)) {
+				
 				s.keyDown(KeyEvent.VK_SPACE);
+				s.wait(0.09);
 				s.keyUp(KeyEvent.VK_SPACE);
+				
+			}
+			if(r.exists(actionPopUp)!= null && (r.exists(succesrate_imp) !=null)){
+				s.keyDown(KeyEvent.VK_RIGHT);
+				//s.keyDown(KeyEvent.VK_DOWN);
+				s.wait(0.75);
+				s.keyUp(KeyEvent.VK_RIGHT);
+				//s.keyUp(KeyEvent.VK_DOWN);
 			}
 			
 			r.wait(rand.nextDouble());
