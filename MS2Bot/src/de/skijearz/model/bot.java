@@ -46,10 +46,10 @@ public class bot implements Runnable {
 			}
 			if(r.exists(actionPopUp)!= null && (r.exists(succesrate_imp) !=null)){
 				s.keyDown(KeyEvent.VK_RIGHT);
-				//s.keyDown(KeyEvent.VK_DOWN);
+				s.keyDown(KeyEvent.VK_DOWN);
 				s.wait(0.75);
 				s.keyUp(KeyEvent.VK_RIGHT);
-				//s.keyUp(KeyEvent.VK_DOWN);
+				s.keyUp(KeyEvent.VK_DOWN);
 			}
 			
 			r.wait(rand.nextDouble());
