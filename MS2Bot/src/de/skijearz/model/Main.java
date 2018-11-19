@@ -1,6 +1,7 @@
 package de.skijearz.model;
 import java.io.IOException;
 
+
 import de.skijearz.view.botMenuController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

@@ -1,15 +1,20 @@
 package de.skijearz.model;
+
 import java.awt.event.KeyEvent;
 import java.util.Random;
 import org.sikuli.basics.Settings;
 import org.sikuli.script.*;
 
+
+
 public class bot implements Runnable {
 
+	
 	private static final Pattern actionPopUp = new Pattern (Main.class.getResource("/de/skijearz/view/resources/Action_popup_button.png"));
 	private static final Pattern succesrate_imp = new Pattern (Main.class.getResource("/de/skijearz/view/resources/succes_rate_imp.png"));;
 	private static Screen s = new Screen(0);
 	private static Region r = new Region(455, 170, 1050, 680);
+	
 	Random rand = new Random();
 
 	public boolean botRunning = false;
@@ -45,11 +50,11 @@ public class bot implements Runnable {
 				
 			}
 			if(r.exists(actionPopUp)!= null && (r.exists(succesrate_imp) !=null)){
-				s.keyDown(KeyEvent.VK_RIGHT);
-				s.keyDown(KeyEvent.VK_DOWN);
-				s.wait(0.75);
-				s.keyUp(KeyEvent.VK_RIGHT);
-				s.keyUp(KeyEvent.VK_DOWN);
+				r.keyDown(KeyEvent.VK_RIGHT);
+				r.keyDown(KeyEvent.VK_DOWN);
+				r.wait(0.81);
+				r.keyUp(KeyEvent.VK_RIGHT);
+				r.keyUp(KeyEvent.VK_DOWN);
 			}
 			
 			r.wait(rand.nextDouble());
