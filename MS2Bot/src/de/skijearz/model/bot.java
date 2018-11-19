@@ -31,7 +31,7 @@ public class bot implements Runnable {
 			
 			Settings.ObserveScanRate = 5f;
 			Settings.WaitScanRate = 5f;
-			//App.focus("MapleStory2 - A new Beginning");
+			App.focus("MapleStory2 - A new Beginning");
 			initiated = true;
 		}
 
