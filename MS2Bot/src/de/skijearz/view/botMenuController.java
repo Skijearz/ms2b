@@ -9,16 +9,21 @@ import de.skijearz.model.GlobalKeyListener;
 import de.skijearz.model.Main;
 import de.skijearz.model.bot;
 import javafx.fxml.FXML;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.TextField;
 
 public class botMenuController extends Thread {
 	private static boolean initiated = false;
 	public Main main;
 	bot b = new bot();
-
+	
 	public void setMain(Main main) {
 		this.main = main;
 	}
 
+	@FXML private TextField numberOfCollums;
+	@FXML private CheckBox autoWalk;
+	
 	@FXML
 	public void startBot() {
 		if (!initiated) {
@@ -48,6 +53,16 @@ public class botMenuController extends Thread {
 		if (b.getState()) {
 			b.setState(false);
 
+		}
+	}
+	@FXML
+	public void setAutoWalk() {
+		try {
+		b.setCollums(Integer.parseInt(numberOfCollums.getText()));
+		b.setAutoWalk(!b.getAutoWalk());
+		}catch(NumberFormatException e) {
+			autoWalk.setSelected(false);
+			System.out.println("Eingabe keine Zahl");
 		}
 	}
 }

@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.skijearz.view.botMenuController">
+<AnchorPane minHeight="130.0" minWidth="300.0" prefHeight="130.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.skijearz.view.botMenuController">
    <children>
-      <Pane layoutY="88.0" prefHeight="40.0" prefWidth="300.0" />
-      <Button layoutX="25.0" layoutY="34.0" mnemonicParsing="false" onAction="#startBot" prefHeight="60.0" prefWidth="120.0" text="Start" />
-      <Button layoutX="155.0" layoutY="34.0" mnemonicParsing="false" onAction="#stopBot" prefHeight="60.0" prefWidth="120.0" text="Stop" />
+      <Button layoutX="155.0" layoutY="34.0" mnemonicParsing="false" onAction="#stopBot" prefHeight="40.0" prefWidth="120.0" text="Stop" />
+      <CheckBox id="autoWalk" fx:id="autoWalk" layoutX="31.0" layoutY="81.0" mnemonicParsing="false" onAction="#setAutoWalk" prefHeight="17.0" prefWidth="120.0" text="Auto Walk" />
+      <Button layoutX="29.0" layoutY="34.0" mnemonicParsing="false" onAction="#startBot" prefHeight="40.0" prefWidth="120.0" text="Start" />
+      <TextField id="numberOfCollums" fx:id="numberOfCollums" layoutX="155.0" layoutY="76.0" prefHeight="25.0" prefWidth="120.0" promptText="Number of Items in a Row">
+         <font>
+            <Font size="9.0" />
+         </font></TextField>
    </children>
 </AnchorPane>
