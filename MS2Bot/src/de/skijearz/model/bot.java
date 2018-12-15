@@ -57,7 +57,7 @@ public class bot implements Runnable {
 
 			if (r.exists(actionPopUp) != null && !(r.exists(succesrate_imp) != null)) {
 
-				keyPress(KeyEvent.VK_SPACE, 0.091);
+				keyPress(KeyEvent.VK_SPACE, 0.09);
 
 			}
 			if (r.exists(actionPopUp) != null && (r.exists(succesrate_imp) != null) && autoWalk) {
